@@ -3,54 +3,63 @@
   <head>
     <title>Quick Tip</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+
+    link(href='https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Syncopate:wght@400;700&display=swap'
+    rel='stylesheet')
   </head>
 
   <body>
-    <div id="app">
-      <main>
-        <h1>Qucik Tip</h1>
-        <section>
-          <div>
-            <label for="yourBill">Bill</label>
-            <input type="number" placeholder="Your bill" id="yourBill" />
+    <main>
+      <h1>Qucik Tip</h1>
+      <section>
+        <div class="bill">
+          <label for="yourBill">Bill</label>
+          <input type="number" placeholder="Your bill" id="yourBill" />
+        </div>
+        <div>
+          <div class="space-between">
+            <label for="tipInput">Select Tip</label>
+            <span id="tipPercent">0%</span>
           </div>
-          <div>
-            <div>
-              <label for="">Select Tip</label>
-              <span id="tipPercent">0%</span>
-            </div>
-            <input type="range" value="0" id="tipInput" />
-          </div>
-          <div>
-            <span>Tip</span>
-            <span id="tipValue"></span>
-          </div>
-          <hr />
-          <div>
-            <span>Total</span>
-            <span id="totalWithTip"></span>
-          </div>
-        </section>
+          <input type="range" value="0" id="tipInput" class="range" />
+        </div>
+        <div class="space-between">
+          <span>Tip</span>
+          <span id="tipValue"></span>
+        </div>
+        <hr />
+        <div class="space-between total">
+          <span>Total</span>
+          <span id="totalWithTip"></span>
+        </div>
+      </section>
 
-        <section>
-          <div>
-            <div>
-              <label for="splitInput">Split</label>
-              <span id="splitValue">1 person</span>
-            </div>
-            <input type="range" min="1" max="10" value="1" id="splitInput" />
+      <section>
+        <div>
+          <div class="space-between">
+            <label for="splitInput">Split</label>
+            <span id="splitValue">1 person</span>
           </div>
-          <div>
-            <span>Bill each</span>
-            <span id="billEach"></span>
-          </div>
-          <div>
-            <span>Tip each</span>
-            <span id="tipEach"></span>
-          </div>
-        </section>
-      </main>
-    </div>
+          <input
+            type="range"
+            min="1"
+            max="10"
+            value="1"
+            id="splitInput"
+            class="range"
+          />
+        </div>
+        <div class="space-between">
+          <span>Bill each</span>
+          <span id="billEach"></span>
+        </div>
+        <div class="space-between">
+          <span>Tip each</span>
+          <span id="tipEach"></span>
+        </div>
+      </section>
+    </main>
 
     <script src="src/index.js"></script>
   </body>
